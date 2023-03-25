@@ -29,15 +29,13 @@ The following code will create a new random generator seeded at <code>1337</code
 #include "mtwister.h"
 
 int main() {
-  MTRand r = seedRand(1337);
-  int i;
-  for(i=0; i<1000; i++) {
-    printf("%f\n", genRand(&r));
-  }
-  return 0;
+	MTRand r = MT_SeedRand(1337);
+	for(int i=0; i < 1000; i++) {
+  		printf("%f\n", MT_GenRand_F64(&r));
+	}
 }
 ```
 
 # License
 
-Public domain.  Have fun!
+Public domain. Have fun!
